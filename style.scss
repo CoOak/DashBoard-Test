@@ -1,0 +1,100 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+.dropdown-menu.show {
+  display: block;
+  right: 5px !important;
+  left: auto;
+  margin-right: 10px;
+}
+
+.dropdown-item:hover{
+  border-left: 3px solid gray;
+}
+
+.side-bar {
+  color: black;
+
+  &:hover {
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    background-color: gray;
+    color: white;
+
+    a{
+
+      color: white;
+
+    }
+
+
+  }
+
+}
+
+.side-bar a{
+  color: black;
+}
+
+.borderless{
+  border: none;
+  border-radius: 10px;
+
+}
+
+.nav-bar{
+  text-decoration: none;
+  list-style: none;
+  margin-top: -5px;
+}
+
+.profile{
+  height: 40px;
+  border-radius: 50px 50px 50px 50px;
+  object-fit: cover;
+  object-position: top;
+  width: 40px;
+
+}
+
+.profile-dropdown{
+  margin-right: 25px !important;
+}
+
+
+
+@include media-breakpoint-down(lg) {
+
+  #side-page{
+
+    transition: 0.5s;
+   display: none;
+    &.show{
+
+
+      width: 100%;
+      z-index: 500;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+
+  .nav-fixed{
+    position: fixed !important;
+    top: 0;
+    z-index: 1000;
+  }
+
+  #main-page{
+
+  }
+
+  .profile-dropdown{
+    margin:0 5px 0 5px !important;
+
+  }
+
+
+}
